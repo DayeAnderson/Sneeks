@@ -5,6 +5,7 @@ const sneakersCtrl = require('../controllers/sneakers');
 
 // Protected Routes
 router.use(require('../config/auth'));
+router.post('/', checkAuth, sneakersCtrl.create);
 
 function checkAuth(req, res, next) {
   if (req.user) return next();
