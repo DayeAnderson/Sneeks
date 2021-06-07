@@ -9,6 +9,7 @@ import "./App.css";
 
 class App extends Component {
   state = {
+    sneakers: [],
     user: authService.getUser(),
   };
 
