@@ -1,0 +1,15 @@
+.nav {
+    width: 100%;
+    
+  }
+
+.nav-wrapper {
+    background-color: rgba(255, 0, 0, 0.692);
+  }
+
+li {
+    display: inline;
+    
+}
+
+
