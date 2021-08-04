@@ -6,8 +6,9 @@ import Login from "../Login/Login";
 import authService from "../../services/authService";
 import Users from "../Users/Users";
 import "./App.css";
-import AddSneaker from '../AddSneaker/AddSneaker'
-import * as sneakerAPI from '../../services/sneakers-api'
+import AddSneaker from '../AddSneaker/AddSneaker';
+import SneakerList from '../SneakerList/SneakerList';
+import * as sneakerAPI from '../../services/sneakers-api';
 
 class App extends Component {
   state = {
@@ -36,7 +37,7 @@ class App extends Component {
     const sneakers = await sneakerAPI.getAll();
     this.setState({sneakers})
   }
-  
+
   render() {
     const {user} = this.state
     return (
@@ -79,6 +80,14 @@ class App extends Component {
             />
           :
           <Redirect to='/login' />
+          }/>
+        <Route 
+          exact path='/sneakers' 
+          render={() => 
+            <SneakerList 
+            sneakers = {this.state.sneakers}
+            user={this.state.user}
+            />
           }/>
       </>
     );

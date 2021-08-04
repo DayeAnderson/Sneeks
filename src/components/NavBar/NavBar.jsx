@@ -10,6 +10,7 @@ const NavBar = ({ user, handleLogout }) => {
           <a className="left" href="/"><img src="https://fontmeme.com/permalink/210802/eb7a2a5fb941753a1dcfa40addb47be1.png" height='30' alt="beat-saber-font" border="0"/></a>
             <ul id="nav-mobile" className="right">
               <li><a href=" " className="nav-link">Welcome, {user.name}</a></li>
+              <li><a className="nav-link-a" href="/sneakers">All Sneakers</a></li>
               <li><a href="/sneakers/add" className="nav-link">Add Sneaker</a></li>
               <li><a href=" " className="nav-link" onClick={handleLogout}>Log Out</a></li>
             </ul>
