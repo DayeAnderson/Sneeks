@@ -4,13 +4,16 @@
   }
 
 .nav-wrapper {
-    background-color: rgba(255, 0, 0, 0.692);
     display: inline-flex;
     align-items: center;
     width: 100%;
     padding: 15px;
     justify-content: space-between;
   }
+
+.left {
+  padding: 15px 0 0 0;
+}
 
 li {
     display: inline;

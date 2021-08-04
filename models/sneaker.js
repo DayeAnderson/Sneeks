@@ -7,7 +7,7 @@ const sneakerSchema = new Schema({
         required: true
     },
     model: {
-        type: [String],
+        type: String,
         required: true
     },
     color: {

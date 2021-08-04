@@ -32,7 +32,11 @@ class App extends Component {
     }), () => this.props.history.push('/sneakers'));
   }
   
-
+  async componentDidMount() {
+    const sneakers = await sneakerAPI.getAll();
+    this.setState({sneakers})
+  }
+  
   render() {
     const {user} = this.state
     return (

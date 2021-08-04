@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sneakersCtrl = require('../controllers/sneakers');
 
 // Public Routes
-
+router.get('/', sneakersCtrl.index);
 // Protected Routes
 router.use(require('../config/auth'));
 router.post('/', checkAuth, sneakersCtrl.create);
